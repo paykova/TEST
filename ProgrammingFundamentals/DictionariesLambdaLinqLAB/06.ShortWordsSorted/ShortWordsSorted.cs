@@ -8,8 +8,8 @@ namespace _05.ShortWordsSorted
     {
         public static void Main()
         {
-           // Solution1();
-             Solution2(); 
+            //  Solution1();
+            Solution2();
 
         }
 
@@ -22,22 +22,26 @@ namespace _05.ShortWordsSorted
                 .Split(separators, StringSplitOptions.RemoveEmptyEntries)
                 .ToArray();
 
-            Dictionary<string, int> dict = new Dictionary<string, int>();
+            string[] distinctWords = words.Distinct().OrderBy(w => w).ToArray();
+         //   Console.WriteLine(string.Join(", ", distinctWords));
+
+            Dictionary<string, int> some = new Dictionary<string, int>();
             List<string> result = new List<string>();
 
-            for (int i = 0; i < words.Length; i++)
+            for (int i = 0; i < distinctWords.Length; i++)
             {
-                dict.Add(words[i], words[i].Length);
+                some.Add(distinctWords[i], distinctWords[i].Length);
             }
-            foreach (var item in dict)
+            foreach (var item in some)
             {
                 if (item.Value < 5)
                 {
                     result.Add(item.Key);
-                }
+                }               
             }
             Console.WriteLine(string.Join(", ", result));
         }
+
 
         private static void Solution1()
         {
