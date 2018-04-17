@@ -75,7 +75,7 @@ public class ProjectController {
 		project.setTitle(projectBindingModel.getTitle());
 		project.setDescription(projectBindingModel.getDescription());
 		project.setBudget(projectBindingModel.getBudget());
-		
+
 		projectRepository.saveAndFlush(project);
 		return "redirect:/";
 	}
