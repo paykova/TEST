@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.SweetDessert", "01.SweetDessert\01.SweetDessert.csproj", "{EA324957-7E24-4623-8CFD-C9FA863B91A7}"
 EndProject
@@ -53,7 +53,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.EnduranceRally", "02.End
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.Entertrain", "02.Entertrain\02.Entertrain.csproj", "{40A8B02B-E04B-4B30-84EF-F761F42091EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spyfer", "Spyfer\Spyfer.csproj", "{D0BDB635-36BB-479C-8E9C-16D41A1809E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spyfer", "Spyfer\Spyfer.csproj", "{D0BDB635-36BB-479C-8E9C-16D41A1809E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.DrumSet", "02.DrumSet\02.DrumSet.csproj", "{3046987E-DE62-4BE5-B58F-8C4376AC1E78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -165,6 +167,10 @@ Global
 		{D0BDB635-36BB-479C-8E9C-16D41A1809E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0BDB635-36BB-479C-8E9C-16D41A1809E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0BDB635-36BB-479C-8E9C-16D41A1809E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3046987E-DE62-4BE5-B58F-8C4376AC1E78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3046987E-DE62-4BE5-B58F-8C4376AC1E78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3046987E-DE62-4BE5-B58F-8C4376AC1E78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3046987E-DE62-4BE5-B58F-8C4376AC1E78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
