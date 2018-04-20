@@ -18,55 +18,71 @@
         [Route("")]
         public IActionResult Index()
         {
-            // TODO
-            return null;
+            var films = dbContext.Films.ToList();
+
+            return View(films); 
         }
 
         [HttpGet]
         [Route("/create")]
         public IActionResult Create()
         {
-            // TODO
-            return null;
+          
+            return View();
         }
 
         [HttpPost]
         [Route("/create")]
         public IActionResult Create(Film film)
         {
-            // TODO
-            return null;
+            dbContext.Films.Add(film);
+            dbContext.SaveChanges();
+
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
         [Route("/edit/{id}")]
         public IActionResult Edit(int? id)
         {
-            return null;
+            Film film = dbContext
+               .Films
+               .Where(p => p.Id == id)
+               .FirstOrDefault();
+
+            return View(film);
         }
 
         [HttpPost]
         [Route("/edit/{id}")]
-        public IActionResult Edit(Film film)
+        public IActionResult EditCondirm(int id, Film filmModel)
         {
-            // TODO
-            return null;
+            dbContext.Films.Update(filmModel);
+            dbContext.SaveChanges();
+
+            return RedirectToAction(nameof(Index));
         }
 
         [HttpGet]
         [Route("/delete/{id}")]
         public IActionResult Delete(int? id)
         {
-            // TODO
-            return null;
+            Film film = dbContext
+                .Films
+                .Where(p => p.Id == id)
+                .FirstOrDefault();
+
+            return View(film); 
         }
 
         [HttpPost]
         [Route("/delete/{id}")]
-        public IActionResult Delete(Film film)
+        public IActionResult DeleteConfirm(int id, Film filmModel)
         {
-            // TODO
-            return null;
+            dbContext.Films.Remove(filmModel);
+            dbContext.SaveChanges();
+
+            return RedirectToAction("Index"); 
         }
     }
 }
