@@ -43,7 +43,7 @@ namespace TodoList.Controllers
             }
             using (var db = new TodoListDbContext())
             {
-                db.Tasks.Add(task);
+                var one = db.Tasks.Find(task);
                 db.SaveChanges();
 
                 return RedirectToAction("Index");  
