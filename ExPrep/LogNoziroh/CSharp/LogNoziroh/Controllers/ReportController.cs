@@ -17,23 +17,25 @@
         [Route("")]
         public IActionResult Index()
         {
-            return null;
+            var reports = this.dbContext.Reports.ToList();
+
+            return View(reports);
         }
 
         [HttpGet]
         [Route("details/{id}")]
         public IActionResult Details(int id)
         {
-			//TODO
-            return null;
+            var report = this.dbContext.Reports.Find(id);
+
+            return View(report);
         }
 
         [HttpGet]
         [Route("create")]
         public IActionResult Create()
         {
-			//TODO
-            return null;
+            return View();
         }
 
         [HttpPost]
@@ -41,25 +43,33 @@
         [ValidateAntiForgeryToken]
         public IActionResult Create(Report report)
         {
-			//TODO
-            return null;
+            if (ModelState.IsValid)
+            {
+                this.dbContext.Reports.Add(report);
+
+                this.dbContext.SaveChanges();
+                return Redirect("/");
+            }
+            return View();
         }
 
         [HttpGet]
         [Route("delete/{id}")]
         public IActionResult Delete(int id)
         {
-			//TODO
-            return null;
+            var report = this.dbContext.Reports.Find(id);
+
+            return View(report);
         }
 
         [HttpPost]
         [Route("delete/{id}")]
         [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirm(Report reportModel)
+        public IActionResult DeleteConfirm(Report report)
         {
-			//TODO
-            return null;
+            this.dbContext.Reports.Remove(report);
+            this.dbContext.SaveChanges();
+            return Redirect("/");
         }
     }
 }

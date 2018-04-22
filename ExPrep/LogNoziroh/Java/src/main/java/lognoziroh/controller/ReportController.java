@@ -23,31 +23,67 @@ public class ReportController {
 
 	@GetMapping("/")
 	public String index(Model model) {
-		//TODO: Implement me ...
+		List<Report> reportList  = this.reportRepository.findAll();
+
+		model.addAttribute("view", "report/index");
+		model.addAttribute("reports", reportList);
+
+		return  "base-layout";
 	}
 
 	@GetMapping("/details/{id}")
 	public String details(Model model, @PathVariable int id) {
-		//TODO: Implement me ...
+		if(!this.reportRepository.exists(id)){
+			return "redirect:/";
+		}
+
+		Report report = this.reportRepository.findOne(id);
+
+		model.addAttribute("view", "report/details");
+		model.addAttribute("report", report);
+		return "base-layout";
 	}
 
 	@GetMapping("/create")
 	public String create(Model model) {
-		//TODO: Implement me ...
-	}
+		model.addAttribute("view", "report/create");
+		return "base-layout";	}
 
 	@PostMapping("/create")
 	public String createProcess(Model model, ReportBindingModel reportBindingModel) {
-		//TODO: Implement me ...
+
+		Report report = new Report(
+				reportBindingModel.getStatus(),
+				reportBindingModel.getOrigin(),
+				reportBindingModel.getMessage()
+		);
+
+		this.reportRepository.saveAndFlush(report);
+
+		return "redirect:/";
 	}
 
 	@GetMapping("/delete/{id}")
 	public String delete(Model model, @PathVariable int id) {
-		//TODO: Implement me ...
+		if(!this.reportRepository.exists(id)){
+			return "redirect:/";
+		}
+
+		Report report = this.reportRepository.findOne(id);
+
+		model.addAttribute("view", "report/delete");
+		model.addAttribute("report", report);
+		return "base-layout";
 	}
 
 	@PostMapping("/delete/{id}")
 	public String deleteProcess(@PathVariable int id, ReportBindingModel reportBindingModel) {
-		//TODO: Implement me ...
+		if(!this.reportRepository.exists(id)){
+			return "redirect:/";
+		}
+
+		Report report = this.reportRepository.findOne(id);
+		this.reportRepository.delete(report);
+		return "redirect:/";
 	}
 }
