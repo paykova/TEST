@@ -1,13 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.PokemonEvolution", "05.PokemonEvolution\05.PokemonEvolution.csproj", "{07370B46-E2EB-4820-8BCB-F6932561C99D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.PokemonEvolution", "05.PokemonEvolution\05.PokemonEvolution.csproj", "{07370B46-E2EB-4820-8BCB-F6932561C99D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Trainlands", "04.Trainlands\04.Trainlands.csproj", "{6132A4D4-EAE3-4134-B821-2BB1F65C6DE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.Trainlands", "04.Trainlands\04.Trainlands.csproj", "{6132A4D4-EAE3-4134-B821-2BB1F65C6DE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.CODE", "03.CODE\03.CODE.csproj", "{4B4A84A8-0D0F-4267-ADA7-695DFA1F6008}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.CODE", "03.CODE\03.CODE.csproj", "{4B4A84A8-0D0F-4267-ADA7-695DFA1F6008}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.AnonymousCache", "01.AnonymousCache\01.AnonymousCache.csproj", "{5C7067B5-6DDE-4505-A952-E84D23BAB240}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.HornetArmada", "02.HornetArmada\02.HornetArmada.csproj", "{B87BDC87-9679-4A2E-AF2A-4FC7B4659392}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{4B4A84A8-0D0F-4267-ADA7-695DFA1F6008}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B4A84A8-0D0F-4267-ADA7-695DFA1F6008}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B4A84A8-0D0F-4267-ADA7-695DFA1F6008}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C7067B5-6DDE-4505-A952-E84D23BAB240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C7067B5-6DDE-4505-A952-E84D23BAB240}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C7067B5-6DDE-4505-A952-E84D23BAB240}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C7067B5-6DDE-4505-A952-E84D23BAB240}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B87BDC87-9679-4A2E-AF2A-4FC7B4659392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B87BDC87-9679-4A2E-AF2A-4FC7B4659392}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B87BDC87-9679-4A2E-AF2A-4FC7B4659392}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B87BDC87-9679-4A2E-AF2A-4FC7B4659392}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
